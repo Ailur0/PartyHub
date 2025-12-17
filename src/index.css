@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 10%;
+
+    --primary: 9 100% 64%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 271 81% 56%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 189 94% 43%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 9 100% 64%;
+
+    --radius: 1rem;
+
+    /* Party-themed gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(9 100% 64%) 0%, hsl(14 100% 57%) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(271 81% 56%) 0%, hsl(280 87% 65%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(9 100% 64%) 0%, hsl(271 81% 56%) 50%, hsl(189 94% 43%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100% / 0.05) 0%, hsl(0 0% 100% / 0.02) 100%);
+    
+    /* Shadows */
+    --shadow-glow: 0 0 40px hsl(9 100% 64% / 0.3);
+    --shadow-card: 0 10px 30px -10px hsl(0 0% 0% / 0.1);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --background: 240 10% 8%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 8% 12%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 8% 12%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 9 100% 64%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 271 81% 56%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 240 6% 20%;
+    --muted-foreground: 240 5% 65%;
+
+    --accent: 189 94% 43%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 6% 20%;
+    --input: 240 6% 20%;
+    --ring: 9 100% 64%;
+
+    /* Dark mode gradients */
+    --gradient-card: linear-gradient(145deg, hsl(240 8% 16%) 0%, hsl(240 8% 12%) 100%);
+    --shadow-glow: 0 0 60px hsl(9 100% 64% / 0.4);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
